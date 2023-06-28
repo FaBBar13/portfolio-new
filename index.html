@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <div class="background">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <div class="foreground">
+
+
+        <nav class="navbar">
+            <a class="logo-fba" href="#accueil">FBA</a>
+            <div class="liens">
+                <ul>
+                    <li><a href="#accueil">Accueil</a></li>
+                    <li><a href="#projet">Projets</a></li>
+                    <li><a href="#parcours">Parcours</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="burger">
+                <a href="#"><span id="icone-burger"></span></a>
+            </div>
+
+        </nav>
+
+        <section class="accueil" id="accueil">
+            <!-- <img src="/images/voie-lactee-1200.jpg" alt="la voie lactée"> -->
+            <div class="prenom">
+                <p>F</p>
+                <p>A</p>
+                <p>B</p>
+                <p>I</p>
+                <p>E</p>
+                <p>N</p>
+            </div>
+            <div class="pres">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque unde quas, expedita cupiditate eius
+                    excepturi quod non incidunt, ipsum numquam at aperiam blanditiis nostrum. Iste veritatis magni eius
+                    veniam vel?
+                    Unde, maxime illo mollitia veniam reprehenderit consectetur magnam odio nesciunt inventore debitis
+                    nisi, totam delectus, dolore voluptate ut? Corrupti molestias dolor nam magni, nihil animi rem
+                    eaque. Enim, facilis quia!
+                    Repellendus sunt recusandae, veritatis odit autem unde amet quam quas quibusdam doloremque optio
+                    earum ipsum hic, fuga id, ex incidunt nulla atque totam quis? Quam mollitia qui corrupti dignissimos
+                    atque!</p>
+            </div>
+        </section>
+
+
+        <section class="projet" id="projet">
+
+
+            <div class="slider" id="projet-slider">
+                <h2>Projets</h2>
+                <div class="wrapper"></div>
+                <!-- <input type="button" value="" class="bouton" id="btn-prev">
+                <input type="button" value="" class="bouton" id="btn-next"> -->
+                <button class="bouton" type="button" id="btn-prev"></button>
+                <button class="bouton" type="button" id="btn-next"></button>
+            </div>
+
+        </section>
+
+        <section class="parcours" id="parcours">
+            <h2>Parcours</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus vel distinctio ea quaerat earum hic,
+                laborum consequatur sed beatae ullam quis repudiandae, libero quo odit rem quas voluptatem sapiente
+                dolore!
+            </p>
+            <div class="cv">
+                <a href="CV_BARREAUFabien.pdf" target="_blank"><img src="/images/cv.jpg"></a>
+            </div>
+        </section>
+
+        <section class="contact" id="contact">
+
+            <h2>Contact</h2>
+            <div class="formulaire">
+
+                <form method="get" action="">
+
+                    <div class="saisie">
+                        <label for="name">Nom : </label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="saisie">
+                        <label for="mail">E-mail : </label>
+                        <input type="email" id="mail" name="mail" required>
+                    </div>
+
+                    <div class="saisie">
+                        <label for="message">Message : </label>
+                        <textarea name="message" id="message" rows="15" cols="50" placeholder="..." required></textarea>
+                    </div>
+                    <div class="saisie">
+                        <button type="submit" value="Envoyer">Envoyer</button>
+                    </div>
+
+
+                </form>
+            </div>
+
+        </section>
+
+    </div>
+    <script src="/script.js"></script>
+</body>
+
+</html>

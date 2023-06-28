@@ -1,0 +1,35 @@
+let projets = '{"projets":[' +
+'{"nomProjet":"memory"		,"nomAffiche":"Memory"				,"picture":"https://picsum.photos/200" },' +
+'{"nomProjet":"integration"	,"nomAffiche":"Première Intégration","picture":"https://picsum.photos/200" },' +
+'{"nomProjet":"bootstrap"	,"nomAffiche":"BootStrap"			,"picture":"https://picsum.photos/200" },' +
+'{"nomProjet":"movie"		,"nomAffiche":"MovieQuiz"			,"picture":"https://picsum.photos/200" }]}';
+
+
+
+
+function afficheProjet() {
+
+    let result = [];
+
+    for (i = 1; i < 5; i++) {
+        const divProjet = document.createElement("div");
+        divProjet.className = "div-projet";
+        const nomProjet = document.createElement("h4");
+        nomProjet.className = "nom-projet";
+        const imgProjet = document.createElement("img");
+        imgProjet.className = "img-projet";
+        imgProjet.src = "./images/" + i + ".jpg";
+        const innerDivProjet = document.createElement("div");
+        innerDivProjet.className = "inner-div-projet";
+
+        innerDivProjet.appendChild(nomProjet);
+        nomProjet.innerHTML = "projet " + i;
+        innerDivProjet.appendChild(imgProjet);
+        divProjet.appendChild(innerDivProjet);
+
+        divCentre.appendChild(divProjet);
+        result.push(divProjet);
+
+    }
+    return result;
+}
