@@ -23,6 +23,7 @@ body {
     background-color: $fond-color;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
+    user-select: none;
 }
 
 .navbar {
@@ -34,13 +35,16 @@ body {
     align-items: center;
     justify-content: space-between;
     animation: scale-up-ver-top 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.4s both;
-
+    z-index: 6;
 
     .logo-fba {
-        font-size: 2em;
-        font-weight: bold;
+        margin-left: 15px;
+        padding: 2px 3px;
+        font-size: 1.5em;
+        font-weight: 800;
         width: auto;
         border: none;
+        height: 40px;
     }
 
     ul {
@@ -53,7 +57,6 @@ body {
         height: 30px;
         width: 100px;
         margin: 15px;
-
     }
 
 
@@ -68,11 +71,10 @@ body {
         text-decoration: none;
         border-radius: 10px;
         transition: all 0.3s ease;
-
     }
 
     a:hover {
-        scale: 1.2;
+        scale: 1.1;
         background-color: gold;
         color: black;
     }
@@ -83,35 +85,7 @@ body {
         display: none;
     }
 
-    // #icone-burger {
-    //     width: 30px;
-    //     height: 3px;
-    //     background: white;
-    //     display: inline-block;
-    //     position: absolute;
 
-    // }
-
-    // #icone-burger::before,
-    // #icone-burger::after {
-    //     content: '';
-
-    //     width: 30px;
-    //     height: 3px;
-    //     background: white;
-    //     display: inline-block;
-    //     position: absolute;
-    //     transform-origin: center;
-    //     transition: all 0.3s ease;
-    // }
-
-    // #icone-burger::before {
-    //     top: -7px;
-    // }
-
-    // #icone-burger::after {
-    //     top: 7px;
-    // }
 }
 
 /* animista.net */
@@ -137,17 +111,20 @@ section {
     width: 90vw;
     min-width: 360px;
     max-width: 1200px;
-    margin: 10px auto;
+    margin: 0 auto;
+    padding: 80px 0 0 0;
     color: $deco-color;
 }
 
-.accueil {
-    //border : solid 1px red;
-    margin-top: 100px;
-    display: flex;
+h2 {
+    color: $text-color;
+}
 
+.accueil {
+
+    display: flex;
     flex-direction: column;
-    //align-items: center;
+
 }
 
 .prenom {
@@ -155,7 +132,7 @@ section {
     display: flex;
     color: $text-color;
     font-size: 3em;
-    margin-top: 30px;
+    margin-top: 50px;
     margin-left: 40px;
 }
 
@@ -168,6 +145,10 @@ section {
 
     p {
         margin-top: 30px;
+        color: rgba(255, 255, 255, 1);
+        background: rgba(0, 0, 0, .3);
+        border-radius: 15px;
+        padding: 16px;
     }
 }
 
@@ -175,13 +156,13 @@ section {
 
 
 .projet {
-    //border: solid 1px red;
+
     background-color: transparent;
 
 }
 
 .slider {
-    //border: solid 1px rgb(238, 238, 129);
+
     position: relative;
     //width: 90vw;
     min-height: 480px;
@@ -191,6 +172,7 @@ section {
 }
 
 .slider h2 {
+    margin-bottom: 25px;
     text-align: center;
 }
 
@@ -202,7 +184,7 @@ section {
     left: 15%;
     width: 70%;
     height: 100%;
-    //border-radius: 150px;
+
     overflow: hidden;
 }
 
@@ -219,8 +201,11 @@ section {
 
 .nom-projet {
     text-align: center;
-    font-size: 20px;
-    color: gold;
+    //-webkit-text-stroke: 2px black;
+    font-size: 25px;
+    font-weight: 500;
+    color: white;
+    letter-spacing: 1px;
     background-color: black;
     position: absolute;
     margin-top: 20px;
@@ -245,7 +230,7 @@ section {
     height: 100%;
     object-fit: fill;
     object-position: center center;
-    border-radius: 32px;
+
     /* opacity : 0.4; */
 }
 
@@ -272,8 +257,6 @@ section {
     height: 320px;
     display: flex;
     justify-content: center;
-    //    border: solid 1px yellow; 
-
     overflow: hidden;
 
 }
@@ -303,22 +286,30 @@ section {
     width: 30px;
     border-radius: 10px;
     font-size: 35px;
-    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    color: $text-color;
+    border: none;
+    //opacity: 1;
 }
 
 #btn-prev {
     left: 0;
-    background: url("/images/prev-noir.png") 50% 50%/20px no-repeat;
+    // background: url("/images/prev-noir.png") 50% 50%/20px no-repeat;
 }
 
 #btn-next {
     right: 0;
-    background: url("/images/next-noir.png") 50% 50%/20px no-repeat;
+    // background: url("/images/next-noir.png") 50% 50%/20px no-repeat;
 }
 
 #btn-next:hover,
 #btn-prev:hover {
-    background-color: gold;
+    background-color: $text-color;
+    color: $fond-color;
 
 }
 
@@ -365,10 +356,10 @@ section {
     // padding: 1em;
     // font-size: 22px;
 
+
     .saisie {
         //border: solid 1px gold;
         margin-bottom: 10px;
-
         display: flex;
     }
 
@@ -382,18 +373,20 @@ section {
         width: 300px;
         line-height: 30px;
         font-size: 100%;
+        outline: none;
     }
 
     textarea {
         vertical-align: middle;
         font-size: 100%;
+        outline: none;
     }
 
     button {
-        width: 200px;
-        margin: 5px auto;
+        width: 150px;
+        margin: 20px auto;
         font-weight: 600;
-        padding: 10px 20px;
+        padding: 15px 20px;
         border-radius: 5px;
         cursor: pointer;
         color: $text-color;
@@ -401,17 +394,17 @@ section {
         text-transform: uppercase;
         letter-spacing: 5px;
 
-
     }
 
     button:hover {
-        background-color: green;
-        color: white;
+        background-color: $text-color;
+        color: $fond-color;
     }
 
     input:focus,
     textarea:focus {
-        border-color: red;
+        // border-color: $text-color;
+        outline: 2px solid $text-color;
     }
 }
 
@@ -430,6 +423,10 @@ section {
         padding: 0;
 
         .burger {
+            a {
+                text-decoration: none;
+                border: 0;
+            }
 
             display: inline-block;
         }
@@ -437,7 +434,7 @@ section {
         #icone-burger {
             margin-right: 60px;
             width: 30px;
-            height: 2px;
+            height: 4px;
             background: white;
             display: inline-block;
             position: absolute;
@@ -448,7 +445,7 @@ section {
         #icone-burger::after {
             content: '';
             width: 30px;
-            height: 2px;
+            height: 4px;
             background: white;
             display: inline-block;
             position: absolute;
@@ -504,13 +501,10 @@ section {
         display: flex;
         justify-content: center;
         transition: all 0.5s ease;
-
-
     }
 
     /* Accueil */
     .accueil {
-        //border : solid 1px red;
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -519,7 +513,6 @@ section {
 
     /* Présentation */
     .prenom {
-        //border : solid 1px red;
         margin-left: 10px;
         flex-direction: column;
         align-items: center;
@@ -542,40 +535,39 @@ section {
         height: 240px;
         display: flex;
         justify-content: center;
-        //border: solid 1px yellow;
-        //        overflow: hidden;
     }
 
 
     //.parcours {}
+    .contact {
 
-    .formulaire {
-        //max-width: 80vw;
-        //border: solid 1px red;
-        flex-direction: column;
-        justify-content: center;
+        h2 {
+            margin-left: 10px;
+        }
 
-        label {
-            text-align: center;
+        .formulaire {
+            flex-direction: column;
+            justify-content: center;
+
+            label {
+                text-align: center;
+            }
+        }
+
+        .saisie {
+            flex-direction: column;
+            max-width: 350px;
+            margin: 0 auto;
+            align-items: center;
+        }
+
+        textarea {
+            //margin: 0 auto;
+            max-width: 300px;
         }
     }
 
-    .saisie {
-        flex-direction: column;
-        max-width: 350px;
-        margin: 0 auto;
-        align-items: center;
-        //text-align: center;
-        //align-items: center;
-    }
 
-
-
-
-    textarea {
-        //margin: 0 auto;
-        max-width: 350px;
-    }
 
 }
 
@@ -597,7 +589,7 @@ section {
 
 
 
-/* wwebdev*/
+/* background from wwebdev*/
 @keyframes move {
     100% {
         transform: translate3d(0, 0, 1px) rotate(360deg);
@@ -629,7 +621,7 @@ section {
 
 
 .background span:nth-child(0) {
-    color: #ffffff;
+    color: #ffffffcc;
     top: 91%;
     left: 54%;
     animation-duration: 42s;
@@ -649,7 +641,7 @@ section {
 }
 
 .background span:nth-child(2) {
-    color: #ffffff;
+    color: #ffffffcc;
     top: 20%;
     left: 2%;
     animation-duration: 83s;
@@ -689,7 +681,7 @@ section {
 }
 
 .background span:nth-child(6) {
-    color: #ffffff;
+    color: #ffffffcc;
     top: 73%;
     left: 50%;
     animation-duration: 6s;
@@ -699,7 +691,7 @@ section {
 }
 
 .background span:nth-child(7) {
-    color: #ffffff;
+    color: #ffffffcc;
     top: 39%;
     left: 7%;
     animation-duration: 42s;
@@ -709,7 +701,7 @@ section {
 }
 
 .background span:nth-child(8) {
-    color: #ffffff;
+    color: #ffffffcc;
     top: 25%;
     left: 40%;
     animation-duration: 38s;
@@ -719,7 +711,7 @@ section {
 }
 
 .background span:nth-child(9) {
-    color: #ffffff;
+    color: #ffffffcc;
     top: 61%;
     left: 66%;
     animation-duration: 56s;
@@ -769,7 +761,7 @@ section {
 }
 
 .background span:nth-child(14) {
-    color: #ffffff;
+    color: #ffffffcc;
     top: 62%;
     left: 87%;
     animation-duration: 149s;
@@ -789,7 +781,7 @@ section {
 }
 
 .background span:nth-child(16) {
-    color: #ffffff;
+    color: #ffffffcc;
     top: 31%;
     left: 67%;
     animation-duration: 113s;

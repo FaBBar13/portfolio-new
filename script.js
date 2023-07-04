@@ -4,11 +4,19 @@
 // const iconeHamburger = document.querySelector('.burger span');
 const iconeHamburger = document.getElementById('icone-burger');
 const classLiens = document.querySelector('.liens');
+const divBurger = document.querySelector('.burger')
 
-iconeHamburger.addEventListener('click', () => {
+divBurger.addEventListener('click', () => {
     classLiens.classList.toggle('menu-mobile');
     iconeHamburger.classList.toggle('open')
 
+});
+
+classLiens.addEventListener('click', ({ target }) => {
+
+    if (target.closest('a')) {
+        divBurger.click();
+    }
 })
 
 

@@ -18,6 +18,9 @@ body {
   background-color: black;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 20px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 .navbar {
@@ -29,12 +32,16 @@ body {
   align-items: center;
   justify-content: space-between;
   animation: scale-up-ver-top 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) 0.4s both;
+  z-index: 6;
 }
 .navbar .logo-fba {
-  font-size: 2em;
-  font-weight: bold;
+  margin-left: 15px;
+  padding: 2px 3px;
+  font-size: 1.5em;
+  font-weight: 800;
   width: auto;
   border: none;
+  height: 40px;
 }
 .navbar ul {
   display: flex;
@@ -59,7 +66,7 @@ body {
   transition: all 0.3s ease;
 }
 .navbar a:hover {
-  scale: 1.2;
+  scale: 1.1;
   background-color: gold;
   color: black;
 }
@@ -85,12 +92,16 @@ section {
   width: 90vw;
   min-width: 360px;
   max-width: 1200px;
-  margin: 10px auto;
+  margin: 0 auto;
+  padding: 80px 0 0 0;
   color: rgb(234, 225, 225);
 }
 
+h2 {
+  color: gold;
+}
+
 .accueil {
-  margin-top: 100px;
   display: flex;
   flex-direction: column;
 }
@@ -99,7 +110,7 @@ section {
   display: flex;
   color: gold;
   font-size: 3em;
-  margin-top: 30px;
+  margin-top: 50px;
   margin-left: 40px;
 }
 
@@ -112,6 +123,10 @@ section {
 }
 .pres p {
   margin-top: 30px;
+  color: rgb(255, 255, 255);
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  padding: 16px;
 }
 
 .projet {
@@ -126,6 +141,7 @@ section {
 }
 
 .slider h2 {
+  margin-bottom: 25px;
   text-align: center;
 }
 
@@ -153,8 +169,10 @@ section {
 
 .nom-projet {
   text-align: center;
-  font-size: 20px;
-  color: gold;
+  font-size: 25px;
+  font-weight: 500;
+  color: white;
+  letter-spacing: 1px;
   background-color: black;
   position: absolute;
   margin-top: 20px;
@@ -180,7 +198,6 @@ section {
      object-fit: fill;
   -o-object-position: center center;
      object-position: center center;
-  border-radius: 32px;
   /* opacity : 0.4; */
 }
 
@@ -235,22 +252,27 @@ section {
   width: 30px;
   border-radius: 10px;
   font-size: 35px;
-  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  color: gold;
+  border: none;
 }
 
 #btn-prev {
   left: 0;
-  background: url("/images/prev-noir.png") 50% 50%/20px no-repeat;
 }
 
 #btn-next {
   right: 0;
-  background: url("/images/next-noir.png") 50% 50%/20px no-repeat;
 }
 
 #btn-next:hover,
 #btn-prev:hover {
   background-color: gold;
+  color: black;
 }
 
 .parcours h2 {
@@ -293,16 +315,18 @@ section {
   width: 300px;
   line-height: 30px;
   font-size: 100%;
+  outline: none;
 }
 .formulaire textarea {
   vertical-align: middle;
   font-size: 100%;
+  outline: none;
 }
 .formulaire button {
-  width: 200px;
-  margin: 5px auto;
+  width: 150px;
+  margin: 20px auto;
   font-weight: 600;
-  padding: 10px 20px;
+  padding: 15px 20px;
   border-radius: 5px;
   cursor: pointer;
   color: gold;
@@ -311,12 +335,12 @@ section {
   letter-spacing: 5px;
 }
 .formulaire button:hover {
-  background-color: green;
-  color: white;
+  background-color: gold;
+  color: black;
 }
 .formulaire input:focus,
 .formulaire textarea:focus {
-  border-color: red;
+  outline: 2px solid gold;
 }
 
 @media screen and (max-width: 779px) {
@@ -331,10 +355,14 @@ section {
   .navbar .burger {
     display: inline-block;
   }
+  .navbar .burger a {
+    text-decoration: none;
+    border: 0;
+  }
   .navbar #icone-burger {
     margin-right: 60px;
     width: 30px;
-    height: 2px;
+    height: 4px;
     background: white;
     display: inline-block;
     position: absolute;
@@ -343,7 +371,7 @@ section {
   .navbar #icone-burger::after {
     content: "";
     width: 30px;
-    height: 2px;
+    height: 4px;
     background: white;
     display: inline-block;
     position: absolute;
@@ -415,21 +443,24 @@ section {
     display: flex;
     justify-content: center;
   }
-  .formulaire {
+  .contact h2 {
+    margin-left: 10px;
+  }
+  .contact .formulaire {
     flex-direction: column;
     justify-content: center;
   }
-  .formulaire label {
+  .contact .formulaire label {
     text-align: center;
   }
-  .saisie {
+  .contact .saisie {
     flex-direction: column;
     max-width: 350px;
     margin: 0 auto;
     align-items: center;
   }
-  textarea {
-    max-width: 350px;
+  .contact textarea {
+    max-width: 300px;
   }
 }
 /***********************************/
@@ -445,7 +476,7 @@ section {
   scroll-snap-type: y mandatory; */
 }
 
-/* wwebdev*/
+/* background from wwebdev*/
 @keyframes move {
   100% {
     transform: translate3d(0, 0, 1px) rotate(360deg);
@@ -475,7 +506,7 @@ section {
 }
 
 .background span:nth-child(0) {
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0.8);
   top: 91%;
   left: 54%;
   animation-duration: 42s;
@@ -495,7 +526,7 @@ section {
 }
 
 .background span:nth-child(2) {
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0.8);
   top: 20%;
   left: 2%;
   animation-duration: 83s;
@@ -535,7 +566,7 @@ section {
 }
 
 .background span:nth-child(6) {
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0.8);
   top: 73%;
   left: 50%;
   animation-duration: 6s;
@@ -545,7 +576,7 @@ section {
 }
 
 .background span:nth-child(7) {
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0.8);
   top: 39%;
   left: 7%;
   animation-duration: 42s;
@@ -555,7 +586,7 @@ section {
 }
 
 .background span:nth-child(8) {
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0.8);
   top: 25%;
   left: 40%;
   animation-duration: 38s;
@@ -565,7 +596,7 @@ section {
 }
 
 .background span:nth-child(9) {
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0.8);
   top: 61%;
   left: 66%;
   animation-duration: 56s;
@@ -615,7 +646,7 @@ section {
 }
 
 .background span:nth-child(14) {
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0.8);
   top: 62%;
   left: 87%;
   animation-duration: 149s;
@@ -635,7 +666,7 @@ section {
 }
 
 .background span:nth-child(16) {
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0.8);
   top: 31%;
   left: 67%;
   animation-duration: 113s;
