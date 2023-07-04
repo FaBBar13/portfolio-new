@@ -17,7 +17,7 @@ classLiens.addEventListener('click', ({ target }) => {
     if (target.closest('a')) {
         divBurger.click();
     }
-})
+});
 
 
 /* Section Projet */
@@ -119,7 +119,6 @@ function increment(value = 1) {
 
 increment();
 
-
 // setInterval(() => {
 //     // Teste d'abord la valeur 'hover' , et si vrai , alors teste 'lock' ,si vrai return....
 //     if (hover || lock) {
@@ -128,8 +127,6 @@ increment();
 //     increment(next);
 //     lock = false;
 // }, 2000);
-
-
 
 document.querySelector('#btn-prev').addEventListener('click', e => {
     increment(next = -1);

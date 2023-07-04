@@ -42,6 +42,8 @@ body {
   width: auto;
   border: none;
   height: 40px;
+  color: black;
+  -webkit-text-stroke: 2px gold;
 }
 .navbar ul {
   display: flex;
@@ -198,7 +200,6 @@ h2 {
      object-fit: fill;
   -o-object-position: center center;
      object-position: center center;
-  /* opacity : 0.4; */
 }
 
 .div-projet {
@@ -282,13 +283,17 @@ h2 {
 .parcours p {
   margin-left: 10px;
   font-style: italic;
+  color: rgb(255, 255, 255);
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  padding: 16px;
 }
 .parcours .cv {
   margin-top: 50px;
-  margin-left: 20px;
+  margin-left: 60px;
 }
 .parcours .cv img {
-  width: 300px;
+  width: 500px;
   height: auto;
 }
 
@@ -442,6 +447,14 @@ h2 {
     height: 240px;
     display: flex;
     justify-content: center;
+  }
+  .parcours .cv {
+    margin-top: 50px;
+    margin-left: 20px;
+  }
+  .parcours .cv img {
+    width: 300px;
+    height: auto;
   }
   .contact h2 {
     margin-left: 10px;
